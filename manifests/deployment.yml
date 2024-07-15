@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: gonzalocasaspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gonzalocasaspipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: gonzalocasaspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: gonzalocasaspipelinesjavascriptdocker 
+          image: mycontainerregistryapps.azurecr.io/gonzalocasaspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
